@@ -1,3 +1,6 @@
+import { SearchBar } from "./components/SearchBar";
+import { List } from "./components/List";
+import { AddMovie } from "./components/AddMovie";
 
 function App() {
   return (
@@ -25,58 +28,16 @@ function App() {
         <section id="content" className="content">
 
             {/*aqui van las peliculas*/}
-            <article className="peli-item">
-                <h3 className="title">Desarrollo web</h3>
-                <p className="description">victorroblesweb.es</p>
-
-                <button className="edit">Editar</button>
-                <button className="delete">Borrar</button>
-            </article>
-
-            <article className="peli-item">
-                <h3 className="title">Desarrollo web</h3>
-                <p className="description">victorroblesweb.es</p>
-
-                <button className="edit">Editar</button>
-                <button className="delete">Borrar</button>
-            </article>
-
-            <article className="peli-item">
-                <h3 className="title">Desarrollo web</h3>
-                <p className="description">victorroblesweb.es</p>
-
-                <button className="edit">Editar</button>
-                <button className="delete">Borrar</button>
-            </article>
-
-            <article className="peli-item">
-                <h3 className="title">Desarrollo web</h3>
-                <p className="description">victorroblesweb.es</p>
-
-                <button className="edit">Editar</button>
-                <button className="delete">Borrar</button>
-            </article>
-
+            <List/>
         </section>
 
         {/*Barra lateral*/}
         <aside className="lateral">
-            <div className="search">
-                <h3 className="title">Buscador</h3>
-                <form>
-                    <input type="text" id="search_field" />
-                    <button id="search">Buscar</button>
-                </form>
-            </div>
+            
+            <SearchBar/>
 
-            <div className="add">
-                <h3 className="title">Añadir pelicula</h3>
-                <form>
-                    <input type="text" id="title" placeholder="Titulo" />
-                    <textarea id="description" placeholder="Descripción"></textarea>
-                    <input type="submit" id="save" value="Guardar" />
-                </form>
-            </div>
+            <AddMovie/>
+
         </aside>
 
         {/*Pie de página*/}
