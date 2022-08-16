@@ -5,7 +5,7 @@ export const List = () => {
     <>
       <article className="peli-item">
         <h3 className="title">Desarrollo web</h3>
-        <p className="description">victorroblesweb.es</p>
+        <p className="description">Descripción de pelicula</p>
 
         <button className="edit">Editar</button>
         <button className="delete">Borrar</button>
@@ -13,7 +13,7 @@ export const List = () => {
 
       <article className="peli-item">
         <h3 className="title">Desarrollo web</h3>
-        <p className="description">victorroblesweb.es</p>
+        <p className="description">Descripción de pelicula</p>
 
         <button className="edit">Editar</button>
         <button className="delete">Borrar</button>
@@ -21,7 +21,7 @@ export const List = () => {
 
       <article className="peli-item">
         <h3 className="title">Desarrollo web</h3>
-        <p className="description">victorroblesweb.es</p>
+        <p className="description">Descripción de pelicula</p>
 
         <button className="edit">Editar</button>
         <button className="delete">Borrar</button>
@@ -29,7 +29,7 @@ export const List = () => {
 
       <article className="peli-item">
         <h3 className="title">Desarrollo web</h3>
-        <p className="description">victorroblesweb.es</p>
+        <p className="description">Descripción de pelicula</p>
 
         <button className="edit">Editar</button>
         <button className="delete">Borrar</button>
