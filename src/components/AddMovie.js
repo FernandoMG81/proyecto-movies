@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SaveOnLocalStorage } from "../helpers/SaveOnLocalStorage";
 
-export const AddMovie = () => {
+export const AddMovie = ({setListState}) => {
 
     const componentTitle = "Añadir película"
     const [movieState, setMovieState] = useState({
@@ -22,6 +22,12 @@ export const AddMovie = () => {
         description
        }
        setMovieState(movie)
+
+       setListState(elements => {
+        return(
+          [...elements, movie]
+        )
+       })
 
        SaveOnLocalStorage('movies', movie)
     }

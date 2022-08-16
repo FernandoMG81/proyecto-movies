@@ -1,8 +1,11 @@
 import { SearchBar } from "./components/SearchBar";
 import { List } from "./components/List";
 import { AddMovie } from "./components/AddMovie";
+import { useState } from "react";
 
 function App() {
+
+    const [listState, setListState] = useState([]);
   return (
     <div className="layout">
         {/*Cabecera*/}
@@ -28,7 +31,7 @@ function App() {
         <section id="content" className="content">
 
             {/*aqui van las peliculas*/}
-            <List/>
+            <List listState={listState} setListState={setListState}/>
         </section>
 
         {/*Barra lateral*/}
@@ -36,7 +39,7 @@ function App() {
             
             <SearchBar/>
 
-            <AddMovie/>
+            <AddMovie setListState={setListState}/>
 
         </aside>
 
