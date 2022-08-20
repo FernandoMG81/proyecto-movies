@@ -37,7 +37,7 @@ function App() {
         {/*Barra lateral*/}
         <aside className="lateral">
             
-            <SearchBar/>
+            <SearchBar listState={listState} setListState={setListState}/>
 
             <AddMovie setListState={setListState}/>
 
