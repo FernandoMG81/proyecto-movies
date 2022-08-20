@@ -1,8 +1,13 @@
-import React, { useEffect } from "react";
-import { SaveOnLocalStorage } from "../helpers/SaveOnLocalStorage";
+import React, { useEffect, useState } from "react";
+import { EditMovie } from "./EditMovie";
+
 
 export const List = ({listState, setListState}) => {
   //const [listState, setListState] = useState([]);
+
+  const [edit, setEdit] = useState(0)
+
+
   //Carga el listado al inicio
   useEffect(() => {
     getMovies()
@@ -29,6 +34,8 @@ export const List = ({listState, setListState}) => {
   }
 
   
+
+  
   return (
     <>
       {listState ? listState.map((movie) => {
@@ -37,8 +44,16 @@ export const List = ({listState, setListState}) => {
             <h3 className="title">{movie.title}</h3>
             <p className="description">{movie.description}</p>
 
-            <button className="edit">Editar</button>
+            <button className="edit" onClick={() => {setEdit(movie.id)}}>Editar</button>
             <button className="delete" onClick={() => {deleteMovie(movie.id)}}>Borrar</button>
+
+            {/*Seccion de editar */}
+            {edit === movie.id && (
+              <EditMovie movie={movie} 
+                        getMovies={getMovies}
+                        setEdit={setEdit}
+                        setListState={setListState}/>
+            )}
           </article>
         );
       })
